@@ -62,9 +62,9 @@ module.exports = {
   },
   variants: {
     extend: {
-      extend: {
-        fontWeight: ['hover']
-      },
+      fontWeight: ['hover'],
+      backgroundColor: ['checked'],
+      borderColor: ['checked']
     },
   },
   plugins: [
