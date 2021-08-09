@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::get('/design', function () {
     return view('design');
 });
+
+// Fortify routes
+require_once __DIR__ . '/fortify.php';
