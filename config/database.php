@@ -63,6 +63,24 @@ return [
             ]) : [],
         ],
 
+        // Conexiones con la base de datos de tokencash
+        'tokenread' => [
+            'driver' => 'mysql',
+            'host'      => env('TOKENREAD_DB_HOST'),
+            'database'  => env('TOKENREAD_DB_NAME'),
+            'username'  => env('TOKENREAD_DB_USERNAME'),
+            'password'  => env('TOKENREAD_DB_PASSWORD')
+        ],
+
+        'tokenwrite' => [
+            'driver' => 'mysql',
+            'host'      => env('TOKENWRITE_DB_HOST'),
+            'port'      => env('TOKENWRITE_DB_PORT'),
+            'database'  => env('TOKENWRITE_DB_NAME'),
+            'username'  => env('TOKENWRITE_DB_USERNAME'),
+            'password'  => env('TOKENWRITE_DB_PASSWORD')
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
@@ -119,7 +137,7 @@ return [
 
     'redis' => [
 
-        'client' => env('REDIS_CLIENT', 'phpredis'),
+        'client' => env('REDIS_CLIENT', 'predis'),
 
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
